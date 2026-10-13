@@ -10,7 +10,7 @@ Run backend commands in **backend/** and frontend commands in **frontend/**. The
 
 ## What environment files does it use?
 
-The backend reads **DATABASE_URL** and **FRONTEND_URL** from **backend/.env**. The Vite frontend reads **VITE_APP_BASE_URL** from an env file in **frontend/**, such as **frontend/.env.local**. Vite exposes **VITE_** values in browser code. The tracked **frontend/src/.env** is misplaced and is being removed.
+The backend reads **DATABASE_URL** and **FRONTEND_URL** from **backend/.env**. The Vite frontend reads **VITE_APP_BASE_URL** from an env file in **frontend/**, such as **frontend/.env.local**. Vite exposes **VITE_** values in browser code. The misplaced **frontend/src/.env** was removed.
 
 ## Is it safe to send a real mailing list?
 
@@ -26,7 +26,7 @@ No. The backend returns a boolean and has no queue, per-recipient status, delive
 
 ## Why are environment credentials being rotated?
 
-The initial Git commit includes non-placeholder values in environment files. Removing them from the current tree does not remove them from earlier commits. Treat any credentials there as exposed and rotate them.
+The initial Git commit includes non-placeholder values in environment files. The files were removed from the current tree, but that does not remove them from earlier commits. Treat any credentials there as exposed and rotate them.
 
 ## What is the license?
 
