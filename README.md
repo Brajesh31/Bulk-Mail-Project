@@ -8,7 +8,7 @@ This repository contains a small React/Vite frontend and an Express/Mongoose bac
 
 The send endpoint has no authentication, authorization, rate limit, recipient limit, or request validation. A caller can submit arbitrary message text and recipient addresses. CORS is not an access-control or anti-abuse mechanism. Mailbox credentials are loaded from the first document in a MongoDB collection, the endpoint logs recipient lists, and the frontend does not handle network failures robustly.
 
-Two environment files with non-placeholder values were committed in the initial repository history. They are being removed from the current tree, but ordinary deletion does not erase previous commits. Treat any credentials in those files as exposed: rotate the MongoDB credential and any other secrets, and review provider access logs. See [Security](SECURITY.md).
+The initial repository history contains two environment files with non-placeholder values. They have been removed from the current tree, but ordinary deletion does not erase earlier commits. Treat any credentials in those files as exposed: rotate the MongoDB credential and any other secrets, and review provider access logs. See [Security](SECURITY.md).
 
 ## Repository layout
 
