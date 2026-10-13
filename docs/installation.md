@@ -25,7 +25,7 @@ macOS or Linux:
 
 Edit **backend/.env** with a local or disposable MongoDB URL and the exact Vite browser origin, usually **http://localhost:5173**. Edit **frontend/.env.local** with the backend API base, usually **http://localhost:3000**.
 
-Vite reads environment files from its project root (**frontend/**), not **frontend/src/**. The tracked **frontend/src/.env** file is in the wrong location for Vite's default environment loading and is being removed. Vite's **VITE_** variables are included in browser code, so use that prefix only for public values such as the API base URL.
+Vite reads environment files from its project root (**frontend/**), not **frontend/src/**. The tracked **frontend/src/.env** file was removed because it is in the wrong location for Vite's default environment loading. Vite's **VITE_** variables are included in browser code, so use that prefix only for public values such as the API base URL.
 
 ## Install and start the backend
 
