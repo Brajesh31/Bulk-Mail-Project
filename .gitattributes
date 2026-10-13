@@ -1,0 +1,21 @@
+# Normalize source, docs, configs, and lockfiles as text.
+* text=auto
+*.md text eol=lf
+*.cff text eol=lf
+*.js text eol=lf
+*.jsx text eol=lf
+*.json text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.env.example text eol=lf
+
+# Preserve binary media and office-format examples.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.svg binary
+*.ico binary
+*.xlsx binary
+*.xls binary
