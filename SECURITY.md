@@ -10,7 +10,7 @@ The current **POST /sendmail** endpoint has no authentication, authorization, ra
 
 The backend loads **email** and **pass** from the first document in MongoDB's **user** collection to configure Gmail transport. This is not a safe secret-management design. Recipient addresses are logged by the backend. There is no sender-account isolation or delivery audit.
 
-The initial repository commit includes **backend/.env** and **frontend/src/.env** with non-placeholder values. Those values are intentionally not reproduced in this policy. The files are being removed from the current tree, but they remain accessible in the existing Git history unless that history is rewritten. Treat any credential from those files as exposed: rotate it, invalidate sessions as appropriate, and review provider access logs. Deleting a file in a later commit does not revoke a secret.
+The initial repository commit includes **backend/.env** and **frontend/src/.env** with non-placeholder values. Those values are intentionally not reproduced in this policy. Both files have been removed from the current tree in follow-up commits, but remain accessible in the existing Git history unless that history is rewritten. Treat any credential from those files as exposed: rotate it, invalidate sessions as appropriate, and review provider access logs. Deleting a file in a later commit does not revoke a secret.
 
 ## Reporting a vulnerability
 
