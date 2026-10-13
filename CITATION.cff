@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use or adapt this project, please cite it as below."
+title: "Bulk Mail Project"
+type: software
+authors:
+  - family-names: Kumar
+    given-names: Brajesh
+repository-code: "https://github.com/Brajesh31/Bulk-Mail-Project"
+url: "https://github.com/Brajesh31/Bulk-Mail-Project"
+license: MIT
+keywords:
+  - email
+  - bulk mail
+  - React
+  - Express
