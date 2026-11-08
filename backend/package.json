@@ -15,6 +15,6 @@
     "env": "^0.0.2",
     "express": "^4.21.2",
     "mongoose": "^8.9.2",
-    "nodemailer": "^6.9.16"
+    "nodemailer": "^10.1.4"
   }
 }
