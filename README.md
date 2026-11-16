@@ -229,3 +229,5 @@ Read [CONTRIBUTING.md](CONTRIBUTING.md), follow [CODE_OF_CONDUCT.md](CODE_OF_CON
 MIT. See [LICENSE](LICENSE). Third-party dependencies and assets retain their own licenses.
 
 <p align="center"><strong>Built as a learning project. Protect recipient data and never send mail without permission.</strong></p>
+
+Last updated: 2026-11-16 22:31 UTC
