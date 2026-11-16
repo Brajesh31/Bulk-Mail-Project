@@ -1,0 +1,18 @@
+flowchart TB
+  subgraph Client["Untrusted browser boundary"]
+    User[Browser user] --> Workbook[Selected workbook] --> UI[React application]
+  end
+  subgraph Server["Application server"]
+    API[Unauthenticated Express endpoint]
+    DB[(MongoDB user collection)]
+    Mail[Nodemailer transport]
+    API --> DB
+    DB --> Mail
+    API --> Mail
+  end
+  subgraph External["External provider"]
+    Gmail[Gmail]
+    Mail --> Gmail
+  end
+  UI -->|HTTP JSON| API
+  API -->|Recipient array currently logged| Logs[Application logs]

@@ -1,0 +1,12 @@
+flowchart TD
+  A[Developer change] --> B[Review source and docs]
+  B --> C[Frontend lint and build]
+  C --> D{Security release gates met?}
+  D -->|No| E[Do not deploy publicly]
+  D -->|Yes| F[Deploy static frontend]
+  F --> G[Deploy backend with managed secrets]
+  G --> H[Verify health, auth, limits, and logs]
+  H --> I[Controlled test with owned mailbox]
+  I --> J[Monitor application and provider]
+  E --> K[Resolve P0 blockers]
+  K --> B
