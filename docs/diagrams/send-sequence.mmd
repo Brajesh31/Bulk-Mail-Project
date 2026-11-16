@@ -1,0 +1,21 @@
+sequenceDiagram
+  actor User
+  participant UI as React UI
+  participant XLS as SheetJS
+  participant API as Express API
+  participant DB as MongoDB
+  participant Mail as Nodemailer/Gmail
+  User->>UI: Enter message and select workbook
+  UI->>XLS: Parse workbook
+  XLS-->>UI: Sheet1 column A values
+  User->>UI: Click Send
+  UI->>API: POST /sendmail {msg, bulkEmail}
+  Note over API: Route has no authentication
+  API->>DB: Read user collection
+  DB-->>API: Sender email and password
+  loop Each submitted value
+    API->>Mail: Send one message
+    Mail-->>API: Provider response or error
+  end
+  API-->>UI: Boolean response
+  Note over UI,API: No per-recipient delivery report

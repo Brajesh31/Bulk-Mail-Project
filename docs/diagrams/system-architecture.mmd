@@ -1,0 +1,11 @@
+flowchart LR
+  U[Browser] --> UI[React + Vite]
+  UI --> XLS[SheetJS: Sheet1 column A]
+  XLS --> P[JSON: msg + bulkEmail]
+  P --> API[Express POST /sendmail]
+  API --> DB[(MongoDB user collection)]
+  DB --> C[First document: email + pass]
+  C --> N[Nodemailer Gmail transport]
+  API --> L[Sequential recipient loop]
+  L --> N
+  N --> G[Gmail]
