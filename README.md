@@ -230,4 +230,4 @@ MIT. See [LICENSE](LICENSE). Third-party dependencies and assets retain their ow
 
 <p align="center"><strong>Built as a learning project. Protect recipient data and never send mail without permission.</strong></p>
 
-Last updated: 2026-11-21 01:12 UTC
+Last updated: 2026-11-21 09:24 UTC
